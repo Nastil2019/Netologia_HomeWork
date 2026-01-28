@@ -1,16 +1,11 @@
 #!/bin/bash
-set -euo pipefail
-ROOT_PASS=$(grep MYSQL_ROOT_PASSWORD .env | cut -d'=' -f2 | tr -d '"')
-sudo mkdir -p /opt/backup
-
+set -e
+BACKUP_DIR="/opt/backup"
+mkdir -p "$BACKUP_DIR"
 docker run --rm \
   --network my-solution_backend \
-  -v /opt/backup:/backup \
+  -v "$BACKUP_DIR":/backup \
+  -e MYSQL_PWD=secret123 \
   mysql:8 \
-  mysqldump \
-    -h 172.20.0.10 \
-    -u root \
-    -p"$ROOT_PASS" \
-    --all-databases > /opt/backup/backup_$(date +%F_%H-%M).sql
-
-echo "Backup saved to: $(ls -t /opt/backup/ | head -n1)"
+  mysqldump -h 172.20.0.10 -u root --all-databases > "/backup/backup_$(date +%F_%H-%M).sql"
+echo "Backup created: $(ls -1 /opt/backup/ | tail -1)"
