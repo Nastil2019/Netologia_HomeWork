@@ -13,6 +13,11 @@
 
 ## Задача 1
 <img width="1591" height="410" alt="image" src="https://github.com/user-attachments/assets/16feb9af-bcc8-4d08-b548-5487b44ef39b" />
+
+<img width="896" height="116" alt="image" src="https://github.com/user-attachments/assets/25806508-086c-40e5-bc16-27aef37bab2d" />
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/01fc89a2-ccd8-4468-9326-6d4f9fd1203a" />
+
 ---
 ### ВНИМАНИЕ!
 !!! В процессе последующего выполнения ДЗ НЕ изменяйте содержимое файлов в fork-репозитории! Ваша задача ДОБАВИТЬ 5 файлов: ```Dockerfile.python```, ```compose.yaml```, ```.gitignore```, ```.dockerignore```,```bash-скрипт```. Если вам понадобилось внести иные изменения в проект - вы что-то делаете неверно!
