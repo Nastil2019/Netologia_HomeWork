@@ -25,6 +25,8 @@
 
 ## Задача 2 (*)
 <img width="1384" height="247" alt="image" src="https://github.com/user-attachments/assets/d2c41a6c-71a5-4384-a69e-87aa1aa130ac" />
+<img width="1886" height="211" alt="image" src="https://github.com/user-attachments/assets/4f3f87bc-29f1-485f-82d8-3788fb2083d1" />
+
 
 ## Задача 3
 <img width="1343" height="58" alt="image" src="https://github.com/user-attachments/assets/5da95e17-d5b7-4b31-a422-330a900f04ac" />
