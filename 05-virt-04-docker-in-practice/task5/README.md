@@ -39,12 +39,16 @@
 
 ## Задача 6
 <img width="1421" height="402" alt="image" src="https://github.com/user-attachments/assets/5c464e40-b65c-4e86-8374-d56f96396828" />
+<img width="735" height="547" alt="image" src="https://github.com/user-attachments/assets/a679a57e-6d20-4038-a4c2-f81476045b55" />
+
 
 ## Задача 6.1
 <img width="1487" height="267" alt="image" src="https://github.com/user-attachments/assets/28f63fc1-c3fb-4dd9-ac20-52df17ee9c63" />
+<img width="771" height="384" alt="image" src="https://github.com/user-attachments/assets/748de07f-7156-4c66-ac3d-a2f74869abc2" />
 
 ## Задача 6.2 (**)
 <img width="1291" height="296" alt="image" src="https://github.com/user-attachments/assets/7cd3f334-aaeb-4150-a904-758c792be1ba" />
+<img width="1909" height="715" alt="image" src="https://github.com/user-attachments/assets/ee061ae5-7b16-4f77-ab38-54e64d19e3c8" />
 
 ## Задача 7 (***)
 <img width="1895" height="722" alt="image" src="https://github.com/user-attachments/assets/f935635d-de67-4ff9-9214-e35fc1fba90f" />
