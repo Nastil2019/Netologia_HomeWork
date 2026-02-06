@@ -39,7 +39,8 @@
 
 ## Задача 6
 <img width="1421" height="402" alt="image" src="https://github.com/user-attachments/assets/5c464e40-b65c-4e86-8374-d56f96396828" />
-<img width="735" height="547" alt="image" src="https://github.com/user-attachments/assets/a679a57e-6d20-4038-a4c2-f81476045b55" />
+<img width="1892" height="1141" alt="image" src="https://github.com/user-attachments/assets/487d58aa-0058-4cec-942c-914ef06846e8" />
+
 
 
 ## Задача 6.1
