@@ -19,8 +19,6 @@
 ---
 
 3.
- <img width="1064" height="58" alt="image" src="https://github.com/user-attachments/assets/c55a42e1-2f34-4b31-89de-ae19a849f0c1" />
-
  <img width="1005" height="35" alt="image" src="https://github.com/user-attachments/assets/8ed6e0a3-61e6-4cab-bab9-4e59c080a65e" />
 
 ---
