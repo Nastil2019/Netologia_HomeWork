@@ -18,7 +18,9 @@
 4. <img width="885" height="265" alt="image" src="https://github.com/user-attachments/assets/2cde9d5d-d691-46bd-a05c-cc49abbcfd52" />
 Первая ошибка так и описана,что не хватает 2го аргумента. Терраформ не понимает тип ли это или имя. Вторая ошибка тоже очевидна - имя не может начинаться с цифры.
 <img width="813" height="136" alt="image" src="https://github.com/user-attachments/assets/d3eea7d5-9a33-45e6-a04c-ad484c6702bb" />
+
 При повторной проверке вылезла новая ошибка. Убрать _FAKE -так как это меняет имя ресурса,а такого ресурса нет,и опечатку в слове resulT
+
 5. <img width="1094" height="649" alt="image" src="https://github.com/user-attachments/assets/bf0c6a1f-f3b3-45e0-86f8-b960b357df96" />
 
 6. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
