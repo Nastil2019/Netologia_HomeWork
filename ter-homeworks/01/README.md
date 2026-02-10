@@ -50,4 +50,4 @@
 
 ---
 
-8. keep_locally = true - вот почему не был удален образ, а также «If true, the image will not be removed when the resource is destroyed.»
+8. keep_locally = true - вот почему не был удален образ, а также keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
