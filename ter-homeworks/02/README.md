@@ -19,12 +19,11 @@ core_fraction = 5
 2. Для учебных задач (SSH, curl, базовые команды) этого более чем достаточно.
 3. Не подходит для CPU-нагруженных задач (компиляция, ML), но отлично для знакомства с инфраструктурой.
 
+<img width="1798" height="267" alt="image" src="https://github.com/user-attachments/assets/f1ae9ad7-4c81-4220-afff-b424ad7ef4b6" />
 
-В качестве решения приложите:
+<img width="1799" height="384" alt="image" src="https://github.com/user-attachments/assets/cb455937-73d9-437d-9cae-6c88d6b4525b" />
 
-- скриншот ЛК Yandex Cloud с созданной ВМ, где видно внешний ip-адрес;
-- скриншот консоли, curl должен отобразить тот же внешний ip-адрес;
-- ответы на вопросы.
+<img width="1063" height="467" alt="image" src="https://github.com/user-attachments/assets/2edb2dac-d5c8-4f5f-9789-d8f310c19516" />
 
 
 ### Задание 2
