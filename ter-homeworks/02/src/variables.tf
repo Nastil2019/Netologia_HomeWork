@@ -33,9 +33,12 @@ variable "vpc_name" {
 
 variable "vms_ssh_root_key" {
   type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKJ3c6d6tZQfiDPRmoqZjFcDZm+e8fS/VgTaYqiwMMEk nastilvasileva@gmail.com"
   description = "ssh-keygen -t ed25519"
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb57765effce8e17e7a5edc4f1b897d9158cf4c6
 # --- Образы ---
 variable "vm_image_family" {
   description = "Family of the OS image (e.g. ubuntu-2204-lts)"
