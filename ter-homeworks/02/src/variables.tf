@@ -36,3 +36,52 @@ variable "vms_ssh_root_key" {
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKJ3c6d6tZQfiDPRmoqZjFcDZm+e8fS/VgTaYqiwMMEk nastilvasileva@gmail.com"
   description = "ssh-keygen -t ed25519"
 }
+# --- Образы ---
+variable "vm_image_family" {
+  description = "Family of the OS image (e.g. ubuntu-2204-lts)"
+  type        = string
+  default     = "ubuntu-2204-lts"
+}
+
+# --- ВМ ---
+variable "vm_name_prefix" {
+  description = "Prefix for VM names (e.g. vm_web_)"
+  type        = string
+  default     = "vm_web_"
+}
+
+variable "vm_name_suffix" {
+  description = "Suffix for VM names (e.g. -prod, -dev)"
+  type        = string
+  default     = ""
+}
+
+variable "vm_platform_id" {
+  description = "Platform ID (e.g. standard-v1)"
+  type        = string
+  default     = "standard-v1"
+}
+
+variable "vm_cores" {
+  description = "Number of CPU cores"
+  type        = number
+  default     = 2
+}
+
+variable "vm_memory" {
+  description = "Memory in GB"
+  type        = number
+  default     = 2
+}
+
+variable "vm_core_fraction" {
+  description = "CPU core fraction (1–100)"
+  type        = number
+  default     = 5
+}
+
+variable "vm_preemptible" {
+  description = "Whether the instance is preemptible"
+  type        = bool
+  default     = true
+}

@@ -12,3 +12,4 @@
 personal.auto.tfvars
 terraform.tfvars
 .authorized_key.json
+service_account_key_file
