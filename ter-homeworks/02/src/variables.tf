@@ -26,3 +26,15 @@ variable "vpc_name" {
 variable "vms_ssh_root_key" {
   type = string
 }
+
+variable "env" {
+  type        = string
+  default     = "develop"
+  description = "Environment: develop, prod, staging, etc."
+}
+
+variable "project" {
+  type        = string
+  default     = "netology"
+  description = "Project name"
+}

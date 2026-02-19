@@ -28,7 +28,7 @@ data "yandex_compute_image" "ubuntu_db" {
 
 # Первая ВМ — web
 resource "yandex_compute_instance" "web" {
-  name        = var.vm_web_name
+  name        = local.vm_web_name
   platform_id = var.vm_web_platform_id
   zone        = "ru-central1-a"
 
@@ -63,9 +63,9 @@ resource "yandex_compute_instance" "web" {
 
 # Вторая ВМ — db
 resource "yandex_compute_instance" "db" {
-  name        = var.vm_db_name
+  name        = local.vm_db_name
   platform_id = var.vm_db_platform_id
-  zone        = "ru-central1-b"   # ← указано в задании
+  zone        = "ru-central1-b"
 
   resources {
     cores         = var.vm_db_cores          # = 2
