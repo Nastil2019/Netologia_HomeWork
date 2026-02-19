@@ -29,25 +29,25 @@ data "yandex_compute_image" "ubuntu_db" {
 # Первая ВМ — web
 resource "yandex_compute_instance" "web" {
   name        = local.vm_web_name
-  platform_id = var.vm_web_platform_id
+  platform_id = "standard-v1"
   zone        = "ru-central1-a"
 
   resources {
-    cores         = var.vm_web_cores
-    memory        = var.vm_web_memory
-    core_fraction = var.vm_web_core_fraction
+    cores         = var.vms_resources["web"].cores
+    memory        = var.vms_resources["web"].memory
+    core_fraction = var.vms_resources["web"].core_fraction
   }
 
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu_web.image_id
-      size     = 10
-      type     = "network-nvme"
+      size     = var.vms_resources["web"].hdd_size
+      type     = var.vms_resources["web"].hdd_type
     }
   }
 
   scheduling_policy {
-    preemptible = var.vm_web_preemptible
+    preemptible = true
   }
 
   network_interface {
@@ -55,34 +55,31 @@ resource "yandex_compute_instance" "web" {
     nat       = true
   }
 
-  metadata = {
-    serial-port-enable = "1"
-    ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
-  }
+  metadata = var.metadata
 }
 
 # Вторая ВМ — db
 resource "yandex_compute_instance" "db" {
   name        = local.vm_db_name
-  platform_id = var.vm_db_platform_id
+  platform_id = "standard-v1"
   zone        = "ru-central1-b"
 
   resources {
-    cores         = var.vm_db_cores          # = 2
-    memory        = var.vm_db_memory         # = 2
-    core_fraction = var.vm_db_core_fraction  # = 20
+    cores         = var.vms_resources["db"].cores
+    memory        = var.vms_resources["db"].memory
+    core_fraction = var.vms_resources["db"].core_fraction
   }
 
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu_db.image_id
-      size     = 10
-      type     = "network-nvme"
+      size     = var.vms_resources["db"].hdd_size
+      type     = var.vms_resources["db"].hdd_type
     }
   }
 
   scheduling_policy {
-    preemptible = var.vm_db_preemptible
+    preemptible = true
   }
 
   network_interface {
@@ -90,8 +87,5 @@ resource "yandex_compute_instance" "db" {
     nat       = true
   }
 
-  metadata = {
-    serial-port-enable = "1"
-    ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
-  }
+  metadata = var.metadata
 }

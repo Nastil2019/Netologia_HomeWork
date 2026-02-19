@@ -23,9 +23,9 @@ variable "vpc_name" {
 }
 
 ### SSH
-variable "vms_ssh_root_key" {
-  type = string
-}
+#variable "vms_ssh_root_key" {
+#  type = string
+#}
 
 variable "env" {
   type        = string
@@ -37,4 +37,41 @@ variable "project" {
   type        = string
   default     = "netology"
   description = "Project name"
+}
+
+# --- Единая переменная для ресурсов ВМ ---
+variable "vms_resources" {
+  description = "Resource configuration for VMs: cores, memory, core_fraction, disk"
+  type = map(object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+    hdd_size      = number
+    hdd_type      = string
+  }))
+  default = {
+    web = {
+      cores         = 2
+      memory        = 2
+      core_fraction = 5
+      hdd_size      = 10
+      hdd_type      = "network-nvme"
+    }
+    db = {
+      cores         = 2
+      memory        = 2
+      core_fraction = 20
+      hdd_size      = 10
+      hdd_type      = "network-nvme"
+    }
+  }
+}
+
+# --- Общая переменная для metadata ---
+variable "metadata" {
+  description = "Common metadata for all VMs"
+  type        = map(string)
+  default = {
+    serial-port-enable = "1"
+  }
 }
