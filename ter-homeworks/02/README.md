@@ -65,9 +65,11 @@ core_fraction = 5
 
 ### Задание 5
 
-1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
-2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
-3. Примените изменения.
+<img width="605" height="201" alt="image" src="https://github.com/user-attachments/assets/c684e5fd-c277-4033-8270-0aa6c714caeb" />
+
+<img width="440" height="228" alt="image" src="https://github.com/user-attachments/assets/b7767721-acbc-45c4-a5a9-1b2034b747c4" />
+
+<img width="597" height="212" alt="image" src="https://github.com/user-attachments/assets/35edd8b4-986b-4cf9-acdb-231f1097cf8c" />
 
 
 ### Задание 6
