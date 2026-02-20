@@ -74,39 +74,8 @@ core_fraction = 5
 
 ### Задание 6
 
-1. Вместо использования трёх переменных  ".._cores",".._memory",".._core_fraction" в блоке  resources {...}, объедините их в единую map-переменную **vms_resources** и  внутри неё конфиги обеих ВМ в виде вложенного map(object).  
-   ```
-   пример из terraform.tfvars:
-   vms_resources = {
-     web={
-       cores=2
-       memory=2
-       core_fraction=5
-       hdd_size=10
-       hdd_type="network-hdd"
-       ...
-     },
-     db= {
-       cores=2
-       memory=4
-       core_fraction=20
-       hdd_size=10
-       hdd_type="network-ssd"
-       ...
-     }
-   }
-   ```
-3. Создайте и используйте отдельную map(object) переменную для блока metadata, она должна быть общая для всех ваших ВМ.
-   ```
-   пример из terraform.tfvars:
-   metadata = {
-     serial-port-enable = 1
-     ssh-keys           = "ubuntu:ssh-ed25519 AAAAC..."
-   }
-   ```  
-  
-5. Найдите и закоментируйте все, более не используемые переменные проекта.
-6. Проверьте terraform plan. Изменений быть не должно.
+<img width="722" height="280" alt="image" src="https://github.com/user-attachments/assets/11e004c5-e1ed-4fac-8cf9-7c7b18c82870" />
+
 
 ------
 
@@ -119,44 +88,13 @@ core_fraction = 5
 ------
 ### Задание 7*
 
-Изучите содержимое файла console.tf. Откройте terraform console, выполните следующие задания: 
+<img width="1597" height="327" alt="image" src="https://github.com/user-attachments/assets/4adfdf5f-29f7-4a65-932d-73fe19486e47" />
 
-1. Напишите, какой командой можно отобразить **второй** элемент списка test_list.
-2. Найдите длину списка test_list с помощью функции length(<имя переменной>).
-3. Напишите, какой командой можно отобразить значение ключа admin из map test_map.
-4. Напишите interpolation-выражение, результатом которого будет: "John is admin for production server based on OS ubuntu-20-04 with X vcpu, Y ram and Z virtual disks", используйте данные из переменных test_list, test_map, servers и функцию length() для подстановки значений.
-
-**Примечание**: если не догадаетесь как вычленить слово "admin", погуглите: "terraform get keys of map"
-
-В качестве решения предоставьте необходимые команды и их вывод.
 
 ------
 
-### Задание 8*
-1. Напишите и проверьте переменную test и полное описание ее type в соответствии со значением из terraform.tfvars:
-```
-test = [
-  {
-    "dev1" = [
-      "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117",
-      "10.0.1.7",
-    ]
-  },
-  {
-    "dev2" = [
-      "ssh -o 'StrictHostKeyChecking=no' ubuntu@84.252.140.88",
-      "10.0.2.29",
-    ]
-  },
-  {
-    "prod1" = [
-      "ssh -o 'StrictHostKeyChecking=no' ubuntu@51.250.2.101",
-      "10.0.1.30",
-    ]
-  },
-]
-```
-2. Напишите выражение в terraform console, которое позволит вычленить строку "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117" из этой переменной.
+<img width="885" height="367" alt="image" src="https://github.com/user-attachments/assets/d16b7e21-e93a-4017-8e2d-d4f872c88b4d" />
+
 ------
 
 ------
