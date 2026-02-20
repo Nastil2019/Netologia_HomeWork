@@ -76,3 +76,8 @@ variable "metadata" {
     ssh-keys           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ41tPw/aNbFDCTSodcQGgA5UvrTvjaMGTTJpYWncIMt win"
   }
 }
+
+variable "test" {
+  description = "List of host connection info: [ { hostname = [ ssh_command, internal_ip ] } ]"
+  type = list(map(list(string)))
+}
