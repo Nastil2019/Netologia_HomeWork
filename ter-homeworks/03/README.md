@@ -8,17 +8,18 @@
 
 ### Задание 2
 
-1. Создайте файл count-vm.tf. Опишите в нём создание двух **одинаковых** ВМ  web-1 и web-2 (не web-0 и web-1) с минимальными параметрами, используя мета-аргумент **count loop**. Назначьте ВМ созданную в первом задании группу безопасности.(как это сделать узнайте в документации провайдера yandex/compute_instance )
-2. Создайте файл for_each-vm.tf. Опишите в нём создание двух ВМ для баз данных с именами "main" и "replica" **разных** по cpu/ram/disk_volume , используя мета-аргумент **for_each loop**. Используйте для обеих ВМ одну общую переменную типа:
-```
-variable "each_vm" {
-  type = list(object({  vm_name=string, cpu=number, ram=number, disk_volume=number }))
-}
-```  
-При желании внесите в переменную все возможные параметры.
-4. ВМ из пункта 2.1 должны создаваться после создания ВМ из пункта 2.2.
-5. Используйте функцию file в local-переменной для считывания ключа ~/.ssh/id_rsa.pub и его последующего использования в блоке metadata, взятому из ДЗ 2.
-6. Инициализируйте проект, выполните код.
+1. 
+<img width="590" height="635" alt="image" src="https://github.com/user-attachments/assets/ac1c309f-06b4-4e4e-b4e9-43e61b4506c7" />
+
+2. 
+<img width="680" height="1102" alt="image" src="https://github.com/user-attachments/assets/7fb62a13-5aeb-427c-a1c5-a2f1953ae041" />
+
+3.
+<img width="1076" height="301" alt="image" src="https://github.com/user-attachments/assets/95d3622c-bd33-456b-80f3-f67fe9697614" />
+
+4.
+<img width="652" height="740" alt="image" src="https://github.com/user-attachments/assets/153b4a46-15dd-4096-b0fb-7fc335536c79" />
+
 
 ------
 
