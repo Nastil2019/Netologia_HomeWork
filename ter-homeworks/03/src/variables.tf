@@ -30,3 +30,12 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+# --- Общая переменная для metadata ---
+variable "metadata" {
+  description = "Common metadata for all VMs"
+  type        = map(string)
+  default = {
+    serial-port-enable = "1"
+    ssh-keys           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ41tPw/aNbFDCTSodcQGgA5UvrTvjaMGTTJpYWncIMt win"
+  }
+}
