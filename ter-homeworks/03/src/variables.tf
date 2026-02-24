@@ -29,8 +29,7 @@ variable "vpc_name" {
   type        = string
   default     = "develop"
   description = "VPC network&subnet name"
-<<<<<<< HEAD
-=======
+
 }
 # --- Общая переменная для metadata ---
 variable "metadata" {
@@ -40,5 +39,4 @@ variable "metadata" {
     serial-port-enable = "1"
     ssh-keys           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ41tPw/aNbFDCTSodcQGgA5UvrTvjaMGTTJpYWncIMt win"
   }
->>>>>>> 8718a8933e82711f35a2a40fbcf2e19862516e41
 }
