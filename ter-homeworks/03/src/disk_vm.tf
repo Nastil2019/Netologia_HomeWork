@@ -11,6 +11,7 @@ resource "yandex_compute_disk" "storage_disk" {
 # Создаём одиночную ВМ "storage"
 resource "yandex_compute_instance" "storage" {
   name        = "storage"
+  hostname    = "storage"
   zone        = var.default_zone
   folder_id   = var.folder_id
 

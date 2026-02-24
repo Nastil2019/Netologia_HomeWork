@@ -29,6 +29,7 @@ locals {
 resource "yandex_compute_instance" "db" {
   for_each    = local.vm_map
   name        = "db-${each.key}"
+  hostname = "db-${each.key}"
   zone        = var.default_zone
   folder_id   = var.folder_id
 

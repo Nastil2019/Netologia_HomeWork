@@ -9,9 +9,6 @@
 *.tfstate.*
 
 # own secret vars store.
-<<<<<<< HEAD
-personal.auto.tfvars
-=======
 personal.auto.tfvars
 *key*
->>>>>>> 8718a8933e82711f35a2a40fbcf2e19862516e41
+hosts.ini
