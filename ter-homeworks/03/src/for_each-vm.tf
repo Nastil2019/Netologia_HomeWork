@@ -22,7 +22,7 @@ variable "each_vm" {
 }
 
 locals {
-  ssh_public_key = file("${pathexpand("~/.ssh/id_rsa.pub")}")
+  ssh_public_key = file("${pathexpand("~/.ssh/id_ed25519.pub")}")
   vm_map = { for vm in var.each_vm : vm.vm_name => vm }
 }
 
