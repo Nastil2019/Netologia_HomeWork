@@ -1,29 +1,29 @@
-# Создаём 3 одинаковых диска по 1 ГБ
 resource "yandex_compute_disk" "storage_disk" {
   count     = 3
   name      = "storage-disk-${count.index + 1}"
   zone      = var.default_zone
   folder_id = var.folder_id
-  size      = 1
-  type      = "network-hdd"
+  size      = var.additional_disk_size
+  type      = var.disk_type
 }
 
-# Создаём одиночную ВМ "storage"
 resource "yandex_compute_instance" "storage" {
   name        = "storage"
   hostname    = "storage"
+  platform_id = var.platform_id
   zone        = var.default_zone
   folder_id   = var.folder_id
 
   resources {
-    cores  = 2
-    memory = 2
+    cores  = var.storage_cpu
+    memory = var.storage_memory
   }
 
   boot_disk {
     initialize_params {
-      image_id = "fd8q1krrgc5pncjckeht"  # Ubuntu 22.04 LTS
-      size     = 10
+      image_id = data.yandex_compute_image.ubuntu.image_id
+      size     = var.storage_disk_size
+      type     = var.disk_type
     }
   }
 
@@ -33,13 +33,16 @@ resource "yandex_compute_instance" "storage" {
     security_group_ids = [yandex_vpc_security_group.example.id]
   }
 
-  # Динамически подключаем созданные диски
   dynamic "secondary_disk" {
     for_each = yandex_compute_disk.storage_disk
     content {
       disk_id  = secondary_disk.value.id
       mode     = "READ_WRITE"
     }
+  }
+
+  scheduling_policy {
+    preemptible = var.preemptible
   }
 
   metadata = {
