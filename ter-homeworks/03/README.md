@@ -9,10 +9,10 @@
 ### Задание 2
 
 1. 
-<img width="590" height="635" alt="image" src="https://github.com/user-attachments/assets/ac1c309f-06b4-4e4e-b4e9-43e61b4506c7" />
+<img width="705" height="935" alt="image" src="https://github.com/user-attachments/assets/b6253626-1263-4b09-8483-8a31df739548" />
 
 2. 
-<img width="680" height="1102" alt="image" src="https://github.com/user-attachments/assets/7fb62a13-5aeb-427c-a1c5-a2f1953ae041" />
+<img width="984" height="941" alt="image" src="https://github.com/user-attachments/assets/9019dba5-748f-49f1-98c5-49b0ff8c9857" />
 
 3.
 <img width="1076" height="301" alt="image" src="https://github.com/user-attachments/assets/95d3622c-bd33-456b-80f3-f67fe9697614" />
@@ -25,8 +25,8 @@
 
 ### Задание 3
 
-<img width="552" height="964" alt="image" src="https://github.com/user-attachments/assets/c67467a6-fd70-4444-86f9-3b372a7ed389" />
-
+<img width="705" height="860" alt="image" src="https://github.com/user-attachments/assets/edf70981-9cf2-44cc-a1bf-5146c0eafda9" />
+<img width="675" height="403" alt="image" src="https://github.com/user-attachments/assets/8c63030c-b599-4cd0-8b95-040b0fc6f4c6" />
 
 ------
 
