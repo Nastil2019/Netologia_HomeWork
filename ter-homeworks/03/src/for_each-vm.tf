@@ -1,35 +1,8 @@
-variable "each_vm" {
-  type = list(object({
-    vm_name     = string
-    cpu         = number
-    ram         = number
-    disk_volume = number
-  }))
-  default = [
-    {
-      vm_name     = "main"
-      cpu         = 4
-      ram         = 8
-      disk_volume = 20
-    },
-    {
-      vm_name     = "replica"
-      cpu         = 2
-      ram         = 4
-      disk_volume = 10
-    }
-  ]
-}
-
-locals {
-  ssh_public_key = file("${pathexpand("~/.ssh/id_ed25519.pub")}")
-  vm_map = { for vm in var.each_vm : vm.vm_name => vm }
-}
-
 resource "yandex_compute_instance" "db" {
   for_each    = local.vm_map
   name        = "db-${each.key}"
-  hostname = "db-${each.key}"
+  hostname    = "db-${each.key}"
+  platform_id = var.platform_id
   zone        = var.default_zone
   folder_id   = var.folder_id
 
@@ -40,8 +13,9 @@ resource "yandex_compute_instance" "db" {
 
   boot_disk {
     initialize_params {
-      image_id = "fd8q1krrgc5pncjckeht"  # Ubuntu 22.04 LTS
+      image_id = data.yandex_compute_image.ubuntu.image_id
       size     = each.value.disk_volume
+      type     = var.disk_type
     }
   }
 
@@ -49,6 +23,10 @@ resource "yandex_compute_instance" "db" {
     subnet_id          = yandex_vpc_subnet.develop.id
     nat                = true
     security_group_ids = [yandex_vpc_security_group.example.id]
+  }
+
+  scheduling_policy {
+    preemptible = var.preemptible
   }
 
   metadata = {

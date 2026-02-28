@@ -1,19 +1,21 @@
 resource "yandex_compute_instance" "web" {
-  count       = 2
+  count       = var.web_count
   name        = "web-${count.index + 1}"
-  hostname = "web-${count.index + 1}"
+  hostname    = "web-${count.index + 1}"
+  platform_id = var.platform_id
   zone        = var.default_zone
   folder_id   = var.folder_id
 
   resources {
-    cores  = 2
-    memory = 2
+    cores  = var.web_cpu
+    memory  = var.web_memory
   }
 
   boot_disk {
     initialize_params {
-      image_id = "fd8q1krrgc5pncjckeht"  # Ubuntu 22.04 LTS
-      size     = 10
+      image_id = data.yandex_compute_image.ubuntu.image_id
+      size     = var.web_disk_size
+      type     = var.disk_type
     }
   }
 
@@ -21,6 +23,10 @@ resource "yandex_compute_instance" "web" {
     subnet_id          = yandex_vpc_subnet.develop.id
     nat                = true
     security_group_ids = [yandex_vpc_security_group.example.id]
+  }
+
+  scheduling_policy {
+    preemptible = var.preemptible
   }
 
   metadata = {
