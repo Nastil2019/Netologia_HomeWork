@@ -1,0 +1,44 @@
+- name: Create lighthouse directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - "{{ lighthouse_install_dir }}"
+    - "{{ lighthouse_config_dir }}"
+    - "{{ lighthouse_data_dir }}"
+
+- name: Download LightHouse
+  get_url:
+    url: "https://github.com/AlexeySetevoi/lighthouse/releases/download/{{ lighthouse_version }}/lighthouse.tar.gz"
+    dest: "/tmp/lighthouse.tar.gz"
+    mode: "0644"
+
+- name: Extract LightHouse
+  unarchive:
+    src: "/tmp/lighthouse.tar.gz"
+    dest: "{{ lighthouse_install_dir }}"
+    remote_src: yes
+    extra_opts: [--strip-components=1]
+
+- name: Deploy config from template
+  template:
+    src: "config.yml.j2"
+    dest: "{{ lighthouse_config_dir }}/config.yml"
+    mode: "0644"
+
+- name: Create systemd service
+  template:
+    src: "lighthouse.service.j2"
+    dest: "/etc/systemd/system/lighthouse.service"
+    mode: "0644"
+  notify:
+    - Reload systemd
+    - Restart lighthouse
+
+- name: Enable and start service
+  systemd:
+    name: lighthouse
+    enabled: yes
+    state: started
+    daemon_reload: yes

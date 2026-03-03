@@ -1,0 +1,17 @@
+lighthouse_version: "latest"
+
+# Пути
+lighthouse_install_dir: "/opt/lighthouse"
+lighthouse_config_dir: "/etc/lighthouse"
+lighthouse_data_dir: "/var/lib/lighthouse"
+
+# Веб-сервер
+lighthouse_http_port: 8080
+lighthouse_http_host: "0.0.0.0"
+
+# ClickHouse подключение
+lighthouse_clickhouse_host: "localhost"
+lighthouse_clickhouse_port: 8123
+lighthouse_clickhouse_database: "default"
+lighthouse_clickhouse_user: "default"
+lighthouse_clickhouse_password: ""
