@@ -1,0 +1,6 @@
+*.retry
+ansible.cfg
+*.pem
+*.key
+*.log
+roles/

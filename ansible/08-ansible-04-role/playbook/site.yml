@@ -1,0 +1,51 @@
+- name: Deploy monitoring stack
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  pre_tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+- name: Deploy ClickHouse
+  hosts: clickhouse
+  become: yes
+  roles:
+    - role: clickhouse
+      clickhouse_databases:
+        - logs
+      clickhouse_users:
+        - name: lighthouse
+          password: "{{ vault_lighthouse_password }}"
+          networks:
+            - "::/0"
+          grants:
+            - "GRANT ALL ON logs.* TO lighthouse"
+
+- name: Deploy Vector on application servers
+  hosts: apps
+  become: yes
+  roles:
+    - role: vector-role
+      vector_sources:
+        - name: "app_logs"
+          type: "file"
+          include: "/var/log/myapp/*.log"
+      vector_sinks:
+        - name: "clickhouse"
+          type: "clickhouse"
+          inputs: ["app_logs"]
+          endpoint: "http://{{ groups['clickhouse'][0] }}:8123"
+          table: "logs.app_logs"
+
+- name: Deploy LightHouse
+  hosts: monitoring
+  become: yes
+  roles:
+    - role: lighthouse-role
+      lighthouse_clickhouse_host: "{{ groups['clickhouse'][0] }}"
+      lighthouse_http_port: 8080
+  tags:
+    - lighthouse
