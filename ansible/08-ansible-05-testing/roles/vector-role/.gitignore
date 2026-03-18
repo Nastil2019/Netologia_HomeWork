@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# Molecule
+.molecule/
+*.retry
+*.orig
+
+# Tox
+.tox/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ansible
+*.retry
+ansible.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Тестовые артефакты
+*.log
+tmp/
+temp/

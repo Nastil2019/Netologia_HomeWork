@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Anastasia Fedotova
+  description: Role for Vector log aggregator
+  license: MIT
+  min_ansible_version: "2.9"
+  namespace: nastil2019
+  role_name: vector_role
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+  galaxy_tags:
+    - monitoring
+    - logging
+
+dependencies: []

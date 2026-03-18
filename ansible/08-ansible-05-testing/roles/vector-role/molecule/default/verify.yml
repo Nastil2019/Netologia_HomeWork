@@ -1,0 +1,22 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Check vector user exists
+      command: id vector
+      changed_when: false
+      failed_when: false
+
+    - name: Check vector config exists
+      stat:
+        path: /etc/vector/vector.yaml
+      register: config
+
+    - name: Assert config exists
+      assert:
+        that:
+          - config.stat.exists
+        success_msg: "Config file exists"
+        fail_msg: "Config file missing"

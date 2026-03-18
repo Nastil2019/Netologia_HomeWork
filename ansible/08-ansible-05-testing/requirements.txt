@@ -1,0 +1,17 @@
+# Ansible и Molecule
+ansible==2.15.13
+molecule==25.1.0
+molecule-docker==2.1.0
+molecule-podman==2.0.0
+
+# Коллекции Ansible (зависимости molecule-docker)
+community.docker>=3.0.2
+ansible.posix>=1.4.0
+
+# Тестирование
+pytest==9.0.2
+docker>=6.0.0
+
+# Утилиты
+jinja2>=3.1.0
+pyyaml>=6.0

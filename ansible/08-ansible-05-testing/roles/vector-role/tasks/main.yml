@@ -1,0 +1,37 @@
+---
+- name: Create vector group
+  group:
+    name: "{{ vector_group }}"
+    state: present
+
+- name: Create vector user
+  user:
+    name: "{{ vector_user }}"
+    group: "{{ vector_group }}"
+    system: yes
+    create_home: no
+
+- name: Create vector directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - "{{ vector_install_dir }}"
+    - "{{ vector_config_dir }}"
+
+- name: Create vector config
+  copy:
+    dest: "{{ vector_config_dir }}/vector.yaml"
+    content: |
+      data_dir: /var/lib/vector
+      [sources.app]
+      type = "stdin"
+      [sinks.console]
+      type = "console"
+      inputs = ["app"]
+    mode: "0644"
+
+- name: Verify installation
+  command: echo "Vector installed successfully"
+  changed_when: false

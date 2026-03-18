@@ -1,0 +1,10 @@
+ansible==2.15.13
+molecule==25.1.0
+molecule-docker==2.1.0
+molecule-podman==2.0.0
+docker>=6.0.0
+community.docker>=3.0.2
+ansible.posix>=1.4.0
+pytest==9.0.2
+ansible-lint
+yamllint

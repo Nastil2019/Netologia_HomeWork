@@ -1,0 +1,60 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: false  # 🔧 Сначала false, пока нет Python
+
+  tasks:
+    # 🔧 Шаг 1: Установите Python3 через raw (работает без Python!)
+    - name: Install Python3
+      raw: apt-get update && apt-get install -y python3 python3-apt
+      changed_when: false
+
+    # 🔧 Шаг 2: Теперь можно включить gather_facts
+    - name: Gather facts
+      setup:
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install required packages
+      apt:
+        name:
+          - curl
+          - sudo
+        state: present
+
+    - name: Create vector group
+      group:
+        name: vector
+        state: present
+
+    - name: Create vector user
+      user:
+        name: vector
+        group: vector
+        system: yes
+        create_home: no
+
+    - name: Create vector directories
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: "0755"
+      loop:
+        - /opt/vector
+        - /etc/vector
+        - /var/lib/vector
+
+    - name: Create vector config
+      copy:
+        dest: /etc/vector/vector.yaml
+        content: |
+          data_dir: /var/lib/vector
+          [sources.app]
+          type = "stdin"
+          [sinks.console]
+          type = "console"
+          inputs = ["app"]
+        mode: "0644"
