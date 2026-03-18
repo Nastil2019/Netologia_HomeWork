@@ -1,3 +1,4 @@
 myenv/*
 .venv
 ansible/08-ansible-04-role/roles/vector-role
+ansible/08-ansible-04-role/roles/lighthouse-role
