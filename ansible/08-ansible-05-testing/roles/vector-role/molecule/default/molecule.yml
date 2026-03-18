@@ -1,4 +1,3 @@
----
 driver:
   name: docker
 
@@ -8,7 +7,6 @@ platforms:
     pre_build_image: true
     privileged: true
     command: sleep infinity
-    # 🔧 Укажите интерпретатор Python3
     ansible_connection: docker
     ansible_python_interpreter: /usr/bin/python3
 
