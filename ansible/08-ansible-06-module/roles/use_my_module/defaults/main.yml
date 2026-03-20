@@ -1,0 +1,6 @@
+my_module_path: "/etc/myapp/config.txt"
+my_module_content: "# Default configuration\nkey=value"
+my_module_owner: "root"
+my_module_group: "root"
+my_module_mode: "0644"
+my_module_backup: false

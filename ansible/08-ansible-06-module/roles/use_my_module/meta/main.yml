@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Anastasia Andryushina
+  description: Role to use my_own_module for file creation
+  license: GPL-3.0-or-later
+  min_ansible_version: "2.9"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+  galaxy_tags:
+    - files
+    - config
+
+dependencies: []

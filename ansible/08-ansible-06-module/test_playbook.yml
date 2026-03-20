@@ -1,0 +1,49 @@
+---
+- name: Test my_own_module idempotency
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  tasks:
+    # 🔹 Очистка перед тестом
+    - name: Clean up test file
+      file:
+        path: /tmp/ansible_test_module.txt
+        state: absent
+      changed_when: false
+
+    - name: Create test file (first run - should change)
+      my_own_module:
+        path: /tmp/ansible_test_module.txt
+        content: |
+          # Test configuration
+          key1=value1
+          key2=value2
+        mode: '0644'
+      register: first_run
+
+    - name: Show first run result
+      debug:
+        msg: "First run - changed: {{ first_run.changed }}"
+
+    - name: Create same file again (second run - should NOT change)
+      my_own_module:
+        path: /tmp/ansible_test_module.txt
+        content: |
+          # Test configuration
+          key1=value1
+          key2=value2
+        mode: '0644'
+      register: second_run
+
+    - name: Show second run result
+      debug:
+        msg: "Second run - changed: {{ second_run.changed }}"
+
+    - name: Assert idempotency
+      assert:
+        that:
+          - first_run.changed == true
+          - second_run.changed == false
+        fail_msg: "Module is not idempotent!"
+        success_msg: "Module is idempotent!"
