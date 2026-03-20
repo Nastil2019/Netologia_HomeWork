@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Copyright: (c) 2024, Anastasia Fedotova <your.email@example.com>
+# Copyright: (c) 2024, Anastasia Andryushina <your.email@example.com>
 # GNU General Public License v3.0+
 
 from __future__ import absolute_import, division, print_function
@@ -59,7 +59,7 @@ options:
         default: false
 
 author:
-    - Anastasia Fedotova (@Nastil2019)
+    - Anastasia Andryushina (@Nastil2019)
 '''
 
 EXAMPLES = r'''
