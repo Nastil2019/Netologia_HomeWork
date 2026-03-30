@@ -16,6 +16,7 @@
 <img width="1329" height="788" alt="image" src="https://github.com/user-attachments/assets/5cc962ae-e4ca-4295-87da-5d65456e6e0e" />
 
 2. 
+<img width="1836" height="440" alt="image" src="https://github.com/user-attachments/assets/cbbfba64-0fa5-4aec-b999-e9c1fb2b4295" />
 
 
 3. Сохраните необходимые шаги, запустите первую сборку master.
