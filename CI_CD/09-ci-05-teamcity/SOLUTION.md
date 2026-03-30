@@ -6,6 +6,7 @@
 <img width="1055" height="61" alt="image" src="https://github.com/user-attachments/assets/8d712d57-d571-4aa3-8ee1-36a48de48f21" />
 
 2.
+<img width="842" height="58" alt="image" src="https://github.com/user-attachments/assets/8870aa5e-76d8-4911-a9b7-78032ec14646" />
 
 ## Основная часть
 
