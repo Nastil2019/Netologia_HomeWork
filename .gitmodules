@@ -1,3 +1,0 @@
-[submodule "CI_CD/09-ci-05-teamcity/teamcity/example-teamcity"]
-	path = CI_CD/09-ci-05-teamcity/teamcity/example-teamcity
-	url = https://github.com/aragastmatb/example-teamcity.git
