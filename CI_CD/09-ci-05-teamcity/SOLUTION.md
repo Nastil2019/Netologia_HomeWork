@@ -18,6 +18,7 @@
 
 5. 
 <img width="1265" height="494" alt="image" src="https://github.com/user-attachments/assets/29b97e0d-b66d-4063-b6e0-26429a52b01c" />
+<img width="755" height="636" alt="image" src="https://github.com/user-attachments/assets/056bdcc1-680a-4366-b097-3d05d09438d9" />
 
 
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
