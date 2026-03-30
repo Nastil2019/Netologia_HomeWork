@@ -6,11 +6,14 @@
 <img width="1055" height="61" alt="image" src="https://github.com/user-attachments/assets/8d712d57-d571-4aa3-8ee1-36a48de48f21" />
 
 2.
-<img width="842" height="58" alt="image" src="https://github.com/user-attachments/assets/8870aa5e-76d8-4911-a9b7-78032ec14646" />
+<img width="934" height="144" alt="image" src="https://github.com/user-attachments/assets/8b428c70-761c-4101-919b-7c47331aae8b" />
+<img width="329" height="291" alt="image" src="https://github.com/user-attachments/assets/6ead3bb5-0aef-44dc-88ae-c3fa95a67711" />
 
-## Основная часть
+3.
+<img width="1277" height="803" alt="image" src="https://github.com/user-attachments/assets/c6d31052-6350-43c6-a90c-ba0a02dfdad2" />
 
-1. Создайте новый проект в teamcity на основе fork.
+4. 
+
 2. Сделайте autodetect конфигурации.
 3. Сохраните необходимые шаги, запустите первую сборку master.
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
