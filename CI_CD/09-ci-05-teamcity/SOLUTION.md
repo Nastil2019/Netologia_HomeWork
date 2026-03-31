@@ -40,7 +40,7 @@
 <img width="987" height="716" alt="image" src="https://github.com/user-attachments/assets/f46d62ed-3fdf-4041-a1e7-c21aab955641" />
 
 11. 
-<img width="987" height="716" alt="image" src="https://github.com/user-attachments/assets/5ad5221e-df16-4850-9f27-0134291e7ef2" />
+<img width="906" height="999" alt="image" src="https://github.com/user-attachments/assets/276f7f98-d198-4656-943c-d6b61b65d7de" />
 
 12. Сделайте push всех изменений в новую ветку репозитория.
 13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
