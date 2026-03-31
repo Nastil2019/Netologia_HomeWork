@@ -23,9 +23,10 @@
 6. 
 <img width="1167" height="565" alt="image" src="https://github.com/user-attachments/assets/8d08d5fb-89be-4cbf-bebd-f9414ae17b60" />
 
-7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
-8. Мигрируйте `build configuration` в репозиторий.
-9. Создайте отдельную ветку `feature/add_reply` в репозитории.
+7. 
+<img width="1574" height="548" alt="image" src="https://github.com/user-attachments/assets/8e482a2c-6fdc-43c9-b5cd-3a3783bac80d" />
+
+9. 
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
 12. Сделайте push всех изменений в новую ветку репозитория.
