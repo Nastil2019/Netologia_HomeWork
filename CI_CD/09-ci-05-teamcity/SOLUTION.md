@@ -20,10 +20,9 @@
 <img width="1265" height="494" alt="image" src="https://github.com/user-attachments/assets/29b97e0d-b66d-4063-b6e0-26429a52b01c" />
 <img width="755" height="636" alt="image" src="https://github.com/user-attachments/assets/056bdcc1-680a-4366-b097-3d05d09438d9" />
 
+6. 
+<img width="1167" height="565" alt="image" src="https://github.com/user-attachments/assets/8d08d5fb-89be-4cbf-bebd-f9414ae17b60" />
 
-4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
-5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
-6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
 8. Мигрируйте `build configuration` в репозиторий.
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
