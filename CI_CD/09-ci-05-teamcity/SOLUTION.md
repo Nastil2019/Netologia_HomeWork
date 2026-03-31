@@ -37,6 +37,7 @@
 <img width="1226" height="311" alt="image" src="https://github.com/user-attachments/assets/50e8811d-f058-4765-af6e-6b84b3d0e4b3" />
 
 10. 
+<img width="987" height="716" alt="image" src="https://github.com/user-attachments/assets/f46d62ed-3fdf-4041-a1e7-c21aab955641" />
 
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
 12. Сделайте push всех изменений в новую ветку репозитория.
