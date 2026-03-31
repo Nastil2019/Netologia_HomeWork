@@ -30,7 +30,11 @@
 
 <img width="1574" height="548" alt="image" src="https://github.com/user-attachments/assets/8e482a2c-6fdc-43c9-b5cd-3a3783bac80d" />
 
+8. 
+<img width="1011" height="646" alt="image" src="https://github.com/user-attachments/assets/6f2b27b9-f7d4-4c59-9eb7-352b9f8f31ec" />
+
 9. 
+
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
 12. Сделайте push всех изменений в новую ветку репозитория.
