@@ -46,6 +46,7 @@
 <img width="1010" height="1014" alt="image" src="https://github.com/user-attachments/assets/ccdd4f7e-51e0-47bf-b95e-9b4762150b01" />
 
 13. 
+<img width="871" height="443" alt="image" src="https://github.com/user-attachments/assets/ef6b2414-44a3-4a88-b649-94ffac4f26d3" />
 
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
