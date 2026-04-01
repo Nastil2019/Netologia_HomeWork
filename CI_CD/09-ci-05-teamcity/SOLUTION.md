@@ -21,27 +21,32 @@
 <img width="755" height="636" alt="image" src="https://github.com/user-attachments/assets/056bdcc1-680a-4366-b097-3d05d09438d9" />
 
 6. 
+<img width="1505" height="1021" alt="image" src="https://github.com/user-attachments/assets/8690399f-12b0-4e90-ac12-52dcd2b66ea8" />
+
 <img width="1167" height="565" alt="image" src="https://github.com/user-attachments/assets/8d08d5fb-89be-4cbf-bebd-f9414ae17b60" />
 
 7. 
+<img width="1629" height="993" alt="image" src="https://github.com/user-attachments/assets/febc3860-d518-4ea9-b2e1-f5afc316eade" />
+
 <img width="1574" height="548" alt="image" src="https://github.com/user-attachments/assets/8e482a2c-6fdc-43c9-b5cd-3a3783bac80d" />
 
+8. 
+<img width="1011" height="646" alt="image" src="https://github.com/user-attachments/assets/6f2b27b9-f7d4-4c59-9eb7-352b9f8f31ec" />
+
 9. 
-10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
-11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
-12. Сделайте push всех изменений в новую ветку репозитория.
-13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
-14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
-15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
-16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
-17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
-18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
-19. В ответе пришлите ссылку на репозиторий.
+<img width="1226" height="311" alt="image" src="https://github.com/user-attachments/assets/50e8811d-f058-4765-af6e-6b84b3d0e4b3" />
 
----
+10. 
+<img width="987" height="716" alt="image" src="https://github.com/user-attachments/assets/f46d62ed-3fdf-4041-a1e7-c21aab955641" />
 
-### Как оформить решение задания
+11. 
+<img width="906" height="999" alt="image" src="https://github.com/user-attachments/assets/276f7f98-d198-4656-943c-d6b61b65d7de" />
 
-Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
+12. 
+<img width="1010" height="1014" alt="image" src="https://github.com/user-attachments/assets/ccdd4f7e-51e0-47bf-b95e-9b4762150b01" />
 
+13. 
+<img width="871" height="443" alt="image" src="https://github.com/user-attachments/assets/ef6b2414-44a3-4a88-b649-94ffac4f26d3" />
+
+14. https://github.com/Nastil2019/example-teamcity
 ---
