@@ -87,6 +87,9 @@ Nagios - Pull
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим `Z`, например
 `./data:/var/lib:Z`
 #
+Ответ:
+<img width="1910" height="1114" alt="image" src="https://github.com/user-attachments/assets/fc456827-daa0-4f45-997d-fc0742061c24" />
+***
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
         
     - Нажмите на кнопку Add a query
