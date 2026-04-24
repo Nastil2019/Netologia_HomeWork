@@ -19,9 +19,11 @@
 
 Изучите самостоятельно ресурсы:
 
-1. [PromQL tutorial for beginners and humans](https://valyala.medium.com/promql-tutorial-for-beginners-9ab455142085).
-1. [Understanding Machine CPU usage](https://www.robustperception.io/understanding-machine-cpu-usage).
-1. [Introduction to PromQL, the Prometheus query language](https://grafana.com/blog/2020/02/04/introduction-to-promql-the-prometheus-query-language/).
+1. 
+<img width="1731" height="994" alt="image" src="https://github.com/user-attachments/assets/f08a39fe-5159-4fb4-9e15-34de6e797a80" />
+2.
+<img width="1724" height="1066" alt="image" src="https://github.com/user-attachments/assets/48b5a109-07e9-47bb-9f0d-7f15035703de" />
+
 
 Создайте Dashboard и в ней создайте Panels:
 
