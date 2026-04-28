@@ -24,7 +24,7 @@
 <img width="1881" height="1092" alt="image" src="https://github.com/user-attachments/assets/8a432e20-1b23-4fd5-8a61-4a8b9793abf4" />
 
 3.
-<img width="1220" height="831" alt="image" src="https://github.com/user-attachments/assets/6184ee7b-1a8a-40a7-86b2-2e735d440c32" />
+<img width="1885" height="983" alt="image" src="https://github.com/user-attachments/assets/a7e0b5fe-8001-4b43-9758-8ebcab9fc107" />
 
 4.
 <img width="1587" height="829" alt="image" src="https://github.com/user-attachments/assets/928bae90-9282-4c35-a475-8f6a6c9a5fca" />
@@ -33,7 +33,7 @@
 <img width="1600" height="1003" alt="image" src="https://github.com/user-attachments/assets/217db245-ae38-45d1-bdb3-7e6e3727f996" />
 
 6.
-<img width="1612" height="708" alt="image" src="https://github.com/user-attachments/assets/b94ffaca-a424-465c-ac0c-008031301e47" />
+<img width="1890" height="872" alt="image" src="https://github.com/user-attachments/assets/b64146d8-b0e5-4b17-bc64-cd6fa9ff1122" />
 
 ## Задание 3
 
