@@ -43,7 +43,7 @@
 ## Задание 4
 
 «JSON MODEL»
-...json
+```json
 {
   "annotations": {
     "list": [
@@ -414,5 +414,5 @@
   "version": 4,
   "weekStart": ""
 }
-...
+```
 ---
