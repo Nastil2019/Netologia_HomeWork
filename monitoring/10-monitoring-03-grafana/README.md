@@ -40,7 +40,9 @@
 1. 
 <img width="1584" height="830" alt="image" src="https://github.com/user-attachments/assets/1c6ba724-1db7-4f74-a3c7-5333620b8b67" />
 
-1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
+2.
+<img width="539" height="303" alt="image" src="https://github.com/user-attachments/assets/286b44be-25e9-44c8-9811-3b8e365240f1" />
+
 
 ## Задание 4
 
