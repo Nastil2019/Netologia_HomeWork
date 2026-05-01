@@ -2,22 +2,8 @@
 
 ## Задание 1
 
-Так как Self-Hosted Sentry довольно требовательная к ресурсам система, мы будем использовать Free Сloud account.
+<img width="1918" height="899" alt="image" src="https://github.com/user-attachments/assets/4b346aea-d4fc-407b-857f-ee60b051c0b7" />
 
-Free Cloud account имеет ограничения:
-
-- 5 000 errors;
-- 10 000 transactions;
-- 1 GB attachments.
-
-Для подключения Free Cloud account:
-
-- зайдите на sentry.io;
-- нажмите «Try for free»;
-- используйте авторизацию через ваш GitHub-аккаунт;
-- далее следуйте инструкциям.
-
-В качестве решения задания пришлите скриншот меню Projects.
 
 ## Задание 2
 
