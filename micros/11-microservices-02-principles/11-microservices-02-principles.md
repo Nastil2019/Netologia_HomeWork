@@ -31,8 +31,8 @@
 | Кластеризация | + | + | + | + | + |
 | Хранение на диске | + | + | + | - | + |
 | Скорость | Средняя | Высокая | Высокая | Высокая | Средняя |
-|Форматы сообщений | ✅ Любой (binary/JSON/XML) | ✅ Любой (binary) | ✅ Любой | ✅ Любой | ✅ Любой
-|Разделение прав (RBAC) | ✅ Vhosts + Users + Permissions | ✅ ACL + SASL | ✅ Users + Permissions | ⚠️ Limited (AUTH) | ✅ Tenants + Roles|
+|Форматы сообщений | JSON, XML, AMQP, MQTT | Любой (JSON, Apache Avro, Protobuf и тд.) | NATS Streaming Protocol | RESP | AMQP/MQTT/RESP и пр. |
+|Разделение прав (RBAC) | + | + | + | Limited | + |
 |Простота эксплуатации | ⭐⭐⭐⭐ | ⭐⭐ (сложный) | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
 |Протоколы | "AMQP 0.9.1 |  MQTT |  STOMP" | Kafka Protocol | "NATS |  JetStream" | RESP | "Pulsar Protocol |  Kafka-compatible"|
 |Сообщество | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
