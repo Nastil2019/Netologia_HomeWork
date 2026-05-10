@@ -26,18 +26,18 @@
 ---
 ## Задача 2: Брокер сообщений
 
-Составьте таблицу возможностей различных брокеров сообщений. На основе таблицы сделайте обоснованный выбор решения.
-
-Решение должно соответствовать следующим требованиям:
-- поддержка кластеризации для обеспечения надёжности,
-- хранение сообщений на диске в процессе доставки,
-- высокая скорость работы,
-- поддержка различных форматов сообщений,
-- разделение прав доступа к различным потокам сообщений,
-- простота эксплуатации.
-
-Обоснуйте свой выбор.
-
+|Критерий | RabbitMQ | Apache Kafka | NATS | Redis Streams | Apache Pulsar|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Кластеризация | Mirrored Queues / Quorum | Native (KRaft/ZooKeeper) | NATS JetStream | Sentinel/Cluster | Native |
+| Хранение на диске | Persistent queues | Log-based storage | JetStream File Store | AOF/RDB | Tiered Storage |
+| Скорость | ⭐⭐⭐⭐ (10-50K msg/s) | ⭐⭐⭐⭐⭐ (1M+ msg/s) | ⭐⭐⭐⭐⭐ (in-memory) | ⭐⭐⭐⭐⭐ (in-memory) | ⭐⭐⭐⭐⭐|
+|Форматы сообщений | ✅ Любой (binary/JSON/XML) | ✅ Любой (binary) | ✅ Любой | ✅ Любой | ✅ Любой
+|Разделение прав (RBAC) | ✅ Vhosts + Users + Permissions | ✅ ACL + SASL | ✅ Users + Permissions | ⚠️ Limited (AUTH) | ✅ Tenants + Roles|
+|Простота эксплуатации | ⭐⭐⭐⭐ | ⭐⭐ (сложный) | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
+|Протоколы | "AMQP 0.9.1 |  MQTT |  STOMP" | Kafka Protocol | "NATS |  JetStream" | RESP | "Pulsar Protocol |  Kafka-compatible"|
+|Сообщество | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
+|Лицензия | MPL 2.0 / Commercial | Apache 2.0 | Apache 2.0 | BSD 3-clause | Apache 2.0|
+###
 ## Задача 3: API Gateway * (необязательная)
 
 ### Есть три сервиса:
