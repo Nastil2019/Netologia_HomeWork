@@ -26,10 +26,10 @@
 ---
 ## Задача 2: Брокер сообщений
 
-|Критерий | RabbitMQ | Apache Kafka | NATS | Redis Streams | Apache Pulsar|
+|Критерий | RabbitMQ | Apache Kafka | NATS | Redis Streams | ActiveMQ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | Кластеризация | Mirrored Queues / Quorum | Native (KRaft/ZooKeeper) | NATS JetStream | Sentinel/Cluster | Native |
-| Хранение на диске | Persistent queues | Log-based storage | JetStream File Store | AOF/RDB | Tiered Storage |
+| Хранение на диске | + | + | + | - | + |
 | Скорость | ⭐⭐⭐⭐ (10-50K msg/s) | ⭐⭐⭐⭐⭐ (1M+ msg/s) | ⭐⭐⭐⭐⭐ (in-memory) | ⭐⭐⭐⭐⭐ (in-memory) | ⭐⭐⭐⭐⭐|
 |Форматы сообщений | ✅ Любой (binary/JSON/XML) | ✅ Любой (binary) | ✅ Любой | ✅ Любой | ✅ Любой
 |Разделение прав (RBAC) | ✅ Vhosts + Users + Permissions | ✅ ACL + SASL | ✅ Users + Permissions | ⚠️ Limited (AUTH) | ✅ Tenants + Roles|
