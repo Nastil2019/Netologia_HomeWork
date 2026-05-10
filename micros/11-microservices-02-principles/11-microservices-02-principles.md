@@ -33,10 +33,9 @@
 | Скорость | Средняя | Высокая | Высокая | Высокая | Средняя |
 |Форматы сообщений | JSON, XML, AMQP, MQTT | Любой (JSON, Apache Avro, Protobuf и тд.) | NATS Streaming Protocol | RESP | AMQP/MQTT/RESP и пр. |
 |Разделение прав (RBAC) | + | + | + | Limited | + |
-|Простота эксплуатации | ⭐⭐⭐⭐ | ⭐⭐ (сложный) | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
-|Протоколы | "AMQP 0.9.1 |  MQTT |  STOMP" | Kafka Protocol | "NATS |  JetStream" | RESP | "Pulsar Protocol |  Kafka-compatible"|
-|Сообщество | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
-|Лицензия | MPL 2.0 / Commercial | Apache 2.0 | Apache 2.0 | BSD 3-clause | Apache 2.0|
+|Простота эксплуатации | +++++ | +++ | +++++ | +++++ | +++ |
+
+Выбор: RabbitMQ - он более распространен (проще найти поддержку), а также обладает высокой производительностью  и простотой в эксплуатации.
 ###
 ## Задача 3: API Gateway * (необязательная)
 
