@@ -28,9 +28,9 @@
 
 |Критерий | RabbitMQ | Apache Kafka | NATS | Redis Streams | ActiveMQ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| Кластеризация | Mirrored Queues / Quorum | Native (KRaft/ZooKeeper) | NATS JetStream | Sentinel/Cluster | Native |
+| Кластеризация | + | + | + | + | + |
 | Хранение на диске | + | + | + | - | + |
-| Скорость | ⭐⭐⭐⭐ (10-50K msg/s) | ⭐⭐⭐⭐⭐ (1M+ msg/s) | ⭐⭐⭐⭐⭐ (in-memory) | ⭐⭐⭐⭐⭐ (in-memory) | ⭐⭐⭐⭐⭐|
+| Скорость | Средняя | Высокая | Высокая | Высокая | Средняя |
 |Форматы сообщений | ✅ Любой (binary/JSON/XML) | ✅ Любой (binary) | ✅ Любой | ✅ Любой | ✅ Любой
 |Разделение прав (RBAC) | ✅ Vhosts + Users + Permissions | ✅ ACL + SASL | ✅ Users + Permissions | ⚠️ Limited (AUTH) | ✅ Tenants + Roles|
 |Простота эксплуатации | ⭐⭐⭐⭐ | ⭐⭐ (сложный) | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐|
