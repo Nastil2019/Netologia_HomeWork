@@ -6,26 +6,23 @@
 
 ## Задача 1: Обеспечить разработку
 
-Предложите решение для обеспечения процесса разработки: хранение исходного кода, непрерывная интеграция и непрерывная поставка. 
-Решение может состоять из одного или нескольких программных продуктов и должно описывать способы и принципы их взаимодействия.
-
-Решение должно соответствовать следующим требованиям:
-- облачная система;
-- система контроля версий Git;
-- репозиторий на каждый сервис;
-- запуск сборки по событию из системы контроля версий;
-- запуск сборки по кнопке с указанием параметров;
-- возможность привязать настройки к каждой сборке;
-- возможность создания шаблонов для различных конфигураций сборок;
-- возможность безопасного хранения секретных данных (пароли, ключи доступа);
-- несколько конфигураций для сборки из одного репозитория;
-- кастомные шаги при сборке;
-- собственные докер-образы для сборки проектов;
-- возможность развернуть агентов сборки на собственных серверах;
-- возможность параллельного запуска нескольких сборок;
-- возможность параллельного запуска тестов.
-
-Обоснуйте свой выбор.
+| Критерий | GitHub Actions | GitLab CI/CD | Jenkins | TeamCity | CircleCI |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Облачная система |  GitHub Cloud |  GitLab.com | ⚠️ Self-hosted | ⚠️ Self-hosted |  SaaS |
+| Git VCS |  Native |  Native |  Plugin |  Plugin |  Plugin |
+| Repo per service |  Monorepo/Multi-repo |  |  |  | |
+| Trigger by VCS event |  push/pull_request |  |  Plugin |  VCS Root | |
+| Manual trigger with params |  workflow_dispatch + inputs |  Manual + variables |  Parameters |  Build parameters |  Manual + params|
+| Build-specific settings | " env |  secrets |  matrix" |  Variables per job |  Parameters |  Configuration parameters |  Contexts|
+| Reusable templates |  reusable workflows |  includes/templates |  Shared libraries |  Templates/Kotlin DSL |  Orbs|
+| Secrets management |  Encrypted secrets + OIDC |  CI/CD variables (masked) |  Credentials plugin |  Passwords/credentials |  Context secrets|
+| Multiple configs per repo |  workflows/ + matrix |  .gitlab-ci.yml stages |  Multibranch pipeline |  Build configurations |  Workflows|
+| Custom build steps |  run + actions marketplace |  script + custom images |  Any shell/plugin |  Build runners |  Steps + orbs|
+| Custom Docker build images |  container: + build-push |  image: + docker executor |  Docker plugin |  Docker build step |  Docker executor|
+| Self-hosted runners |  self-hosted runners |  self-hosted runners |  Master/agents |  Build agents |  Self-hosted runners|
+| Parallel builds |  matrix + jobs |  parallel: + needs |  parallelStage |  Parallel steps |  parallel: true|
+| Parallel tests |  matrix + services |  parallel + artifacts |  parallelTest |  Parallel configurations |  parallel: true|
+| Pricing (free tier) |  2000 min/mo public |  400 min/mo |  Open source | ❌ Limited free |  2500 credits/mo|
 
 ## Задача 2: Логи
 
