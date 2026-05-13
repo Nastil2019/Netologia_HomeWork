@@ -6,23 +6,24 @@
 
 ## Задача 1: Обеспечить разработку
 
-| Критерий | GitHub Actions | GitLab CI/CD | Yandex Cloud CI/CD |
-|:---:|:---:|:---:|:---:|
-| Облачная система |  GitHub Cloud |  GitLab.com | Yandex Cloud |
-| Git VCS |  Native |  Native |  YC Container Registry + Git |
-| Репозиторий на сервис |  + | + | + |
-| Сборка по событию |  push,merge, tag |  push,merge, tag |  push,merge, tag |
-| Сборка по кнопке |  + |  + |  + |
-| Возможность привязать настройки к каждой сборке | env, secrets, variables |  env, secrets, variables |  Configuration parameters, env, secrets |
-| Reusable templates |  reusable workflows |  includes/templates |  Shared libraries |  Templates/Kotlin DSL |  Orbs|
-| Secrets management |  Encrypted secrets + OIDC |  CI/CD variables (masked) |  Credentials plugin |  Passwords/credentials |  Context secrets|
-| Multiple configs per repo |  workflows/ + matrix |  .gitlab-ci.yml stages |  Multibranch pipeline |  Build configurations |  Workflows|
-| Custom build steps |  run + actions marketplace |  script + custom images |  Any shell/plugin |  Build runners |  Steps + orbs|
-| Custom Docker build images |  container: + build-push |  image: + docker executor |  Docker plugin |  Docker build step |  Docker executor|
-| Self-hosted runners |  self-hosted runners |  self-hosted runners |  Master/agents |  Build agents |  Self-hosted runners|
-| Parallel builds |  matrix + jobs |  parallel: + needs |  parallelStage |  Parallel steps |  parallel: true|
-| Parallel tests |  matrix + services |  parallel + artifacts |  parallelTest |  Parallel configurations |  parallel: true|
-| Pricing (free tier) |  2000 min/mo public |  400 min/mo |  Open source | ❌ Limited free |  2500 credits/mo|
+| Критерий | Yandex Cloud CI/CD |
+|:---:|:---:|
+| Облачная система | Yandex Cloud |
+| Git VCS |  YC Container Registry + Git |
+| Репозиторий на сервис | + | 
+| Сборка по событию | push,merge, tag |
+| Сборка по кнопке | + |
+| Настройки к каждой сборке | Configuration parameters, env, secrets |
+| Создания шаблонов для различных конфигураций сборок | Pipeline templates + YAML |
+| Секреты | Lockbox (managed secrets) + IAM|
+| Несколько конфигураций для сборки из одного репозитория |  Multiple pipelines + filters |
+| Кастомные шаги | YC CLI + Cloud Functions + containers |
+| Docker-образы | Использование собственных build-образов |
+| Self-hosted runners | + |
+| Parallel builds | + |
+| Parallel tests | + |
+
+
 
 ## Задача 2: Логи
 
