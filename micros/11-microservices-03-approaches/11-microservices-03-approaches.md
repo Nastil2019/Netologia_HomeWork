@@ -9,11 +9,11 @@
 | Критерий | GitHub Actions | GitLab CI/CD | Yandex Cloud CI/CD |
 |:---:|:---:|:---:|:---:|
 | Облачная система |  GitHub Cloud |  GitLab.com | Yandex Cloud |
-| Git VCS |  Native |  Native |  Plugin |
-| Репозиторий на сервис |  + | + | + | + | + |
-| Сборка по событию |  push/pull_request |  |  Plugin |  VCS Root | |
-| Manual trigger with params |  workflow_dispatch + inputs |  Manual + variables |  Parameters |  Build parameters |  Manual + params|
-| Build-specific settings | " env |  secrets |  matrix" |  Variables per job |  Parameters |  Configuration parameters |  Contexts|
+| Git VCS |  Native |  Native |  YC Container Registry + Git |
+| Репозиторий на сервис |  + | + | + |
+| Сборка по событию |  push,merge, tag |  push,merge, tag |  push,merge, tag |
+| Сборка по кнопке |  + |  + |  + |
+| Возможность привязать настройки к каждой сборке | " env |  secrets |  matrix" |  Variables per job |  Parameters |  Configuration parameters |  Contexts|
 | Reusable templates |  reusable workflows |  includes/templates |  Shared libraries |  Templates/Kotlin DSL |  Orbs|
 | Secrets management |  Encrypted secrets + OIDC |  CI/CD variables (masked) |  Credentials plugin |  Passwords/credentials |  Context secrets|
 | Multiple configs per repo |  workflows/ + matrix |  .gitlab-ci.yml stages |  Multibranch pipeline |  Build configurations |  Workflows|
