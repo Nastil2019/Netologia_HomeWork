@@ -6,12 +6,12 @@
 
 ## Задача 1: Обеспечить разработку
 
-| Критерий | GitHub Actions | GitLab CI/CD | Jenkins | TeamCity | CircleCI |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| Облачная система |  GitHub Cloud |  GitLab.com | ⚠️ Self-hosted | ⚠️ Self-hosted |  SaaS |
-| Git VCS |  Native |  Native |  Plugin |  Plugin |  Plugin |
-| Repo per service |  Monorepo/Multi-repo |  |  |  | |
-| Trigger by VCS event |  push/pull_request |  |  Plugin |  VCS Root | |
+| Критерий | GitHub Actions | GitLab CI/CD | Yandex Cloud CI/CD |
+|:---:|:---:|:---:|:---:|
+| Облачная система |  GitHub Cloud |  GitLab.com | Yandex Cloud |
+| Git VCS |  Native |  Native |  Plugin |
+| Репозиторий на сервис |  + | + | + | + | + |
+| Сборка по событию |  push/pull_request |  |  Plugin |  VCS Root | |
 | Manual trigger with params |  workflow_dispatch + inputs |  Manual + variables |  Parameters |  Build parameters |  Manual + params|
 | Build-specific settings | " env |  secrets |  matrix" |  Variables per job |  Parameters |  Configuration parameters |  Contexts|
 | Reusable templates |  reusable workflows |  includes/templates |  Shared libraries |  Templates/Kotlin DSL |  Orbs|
