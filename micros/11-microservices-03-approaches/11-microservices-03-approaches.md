@@ -13,7 +13,7 @@
 | Репозиторий на сервис |  + | + | + |
 | Сборка по событию |  push,merge, tag |  push,merge, tag |  push,merge, tag |
 | Сборка по кнопке |  + |  + |  + |
-| Возможность привязать настройки к каждой сборке | " env |  secrets |  matrix" |  Variables per job |  Parameters |  Configuration parameters |  Contexts|
+| Возможность привязать настройки к каждой сборке | env, secrets, variables |  env, secrets, variables |  Configuration parameters, env, secrets |
 | Reusable templates |  reusable workflows |  includes/templates |  Shared libraries |  Templates/Kotlin DSL |  Orbs|
 | Secrets management |  Encrypted secrets + OIDC |  CI/CD variables (masked) |  Credentials plugin |  Passwords/credentials |  Context secrets|
 | Multiple configs per repo |  workflows/ + matrix |  .gitlab-ci.yml stages |  Multibranch pipeline |  Build configurations |  Workflows|
