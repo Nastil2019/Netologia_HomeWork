@@ -4,3 +4,4 @@ ansible/08-ansible-04-role/roles/vector-role
 ansible/08-ansible-04-role/roles/lighthouse-role
 ansible/*
 *venv
+monitoring/10-monitoring-02-systems/sandbox
