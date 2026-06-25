@@ -1,0 +1,16 @@
+*.crt
+*.key
+*.pem
+*.p12
+*.pfx
+*.csr
+*.srl
+*.ca
+tls.*
+developer.*
+*.secret
+*secret*.yaml
+*credentials*
+*.tmp
+*.bak
+*.swp
