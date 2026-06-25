@@ -18,6 +18,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: task2-pvc
 spec:
+  storageClassName: ""
   volumeName: task2-pv
   volumeMode: Filesystem
   accessModes:
