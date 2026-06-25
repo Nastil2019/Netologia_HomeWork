@@ -1,0 +1,39 @@
+# Настройки frontend (nginx)
+frontend:
+  replicaCount: 1
+  image:
+    repository: nginx
+    tag: "1.25"       
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+
+# Настройки backend (redis)
+backend:
+  replicaCount: 1
+  image:
+    repository: redis
+    tag: "7.0" 
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 6379
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+
+# Общие настройки
+nameOverride: ""
+fullnameOverride: ""
