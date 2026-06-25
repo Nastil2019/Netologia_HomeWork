@@ -1,0 +1,66 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: task2-pv
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: task2-pvc
+spec:
+  volumeName: task2-pv
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-exchange-pvc
+  labels:
+    app: data-exchange-pvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-exchange-pvc
+  template:
+    metadata:
+      labels:
+        app: data-exchange-pvc
+    spec:
+      containers:
+      - name: busybox
+        image: busybox:latest
+        command: ["/bin/sh", "-c"]
+        args: ["while true; do echo \"$(date) - Hello from busybox via PV\" >> /data/shared.txt; sleep 5; done"]
+        volumeMounts:
+        - name: pv-storage
+          mountPath: /data
+      - name: multitool
+        image: wbitt/network-multitool
+        env:
+        - name: HTTP_PORT
+          value: "8080"
+        command: ["/bin/sh", "-c"]
+        args: ["tail -f /data/shared.txt"]
+        volumeMounts:
+        - name: pv-storage
+          mountPath: /data
+      volumes:
+      - name: pv-storage
+        persistentVolumeClaim:
+          claimName: task2-pvc
