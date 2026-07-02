@@ -5,3 +5,4 @@ ansible/08-ansible-04-role/roles/lighthouse-role
 ansible/*
 *venv
 monitoring/10-monitoring-02-systems/sandbox
+kuber-main/3.2/terraform.tfstate.backup
