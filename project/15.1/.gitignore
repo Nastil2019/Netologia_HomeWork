@@ -5,3 +5,4 @@
 *.pem
 *lock*
 terraform.tfstate.backup
+*tfstate*

@@ -20,7 +20,7 @@ resource "yandex_vpc_subnet" "private" {
   route_table_id = yandex_vpc_route_table.nat_route.id
 }
 
-# Route table для приватной подсети
+# Route table для приватной подсети (для выхода в интернет через NAT)
 resource "yandex_vpc_route_table" "nat_route" {
   name       = "nat-route"
   network_id = yandex_vpc_network.network.id
@@ -31,21 +31,32 @@ resource "yandex_vpc_route_table" "nat_route" {
   }
 }
 
-# Security group для публичной ВМ
+# Security group для публичной подсети
 resource "yandex_vpc_security_group" "public_sg" {
   name        = "public-sg"
-  description = "Security group for public VM"
+  description = "Security group for public subnet"
   network_id  = yandex_vpc_network.network.id
 
-  # SSH доступ
   ingress {
     protocol       = "TCP"
-    description    = "SSH"
+    description    = "SSH from internet"
     v4_cidr_blocks = ["0.0.0.0/0"]
     port           = 22
   }
 
-  # Разрешаем весь исходящий трафик
+  ingress {
+    protocol       = "ICMP"
+    description    = "ICMP"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    protocol       = "TCP"
+    description    = "SSH internal"
+    v4_cidr_blocks = [var.public_subnet_cidr]
+    port           = 22
+  }
+
   egress {
     protocol       = "ANY"
     description    = "Allow all outbound"
@@ -55,13 +66,12 @@ resource "yandex_vpc_security_group" "public_sg" {
   }
 }
 
-# Security group для приватной ВМ
+# Security group для приватной подсети
 resource "yandex_vpc_security_group" "private_sg" {
   name        = "private-sg"
-  description = "Security group for private VM"
+  description = "Security group for private subnet"
   network_id  = yandex_vpc_network.network.id
 
-  # SSH доступ только из публичной подсети
   ingress {
     protocol       = "TCP"
     description    = "SSH from public subnet"
@@ -69,12 +79,35 @@ resource "yandex_vpc_security_group" "private_sg" {
     port           = 22
   }
 
-  # Разрешаем весь исходящий трафик (пойдёт через NAT)
+  ingress {
+    protocol       = "ICMP"
+    description    = "ICMP from public subnet"
+    v4_cidr_blocks = [var.public_subnet_cidr]
+  }
+
   egress {
     protocol       = "ANY"
     description    = "Allow all outbound"
     v4_cidr_blocks = ["0.0.0.0/0"]
     from_port      = 0
     to_port        = 65535
+  }
+}
+
+# Статический IP для NAT-инстанса
+resource "yandex_vpc_address" "nat_address" {
+  name = "nat-static-ip"
+  
+  external_ipv4_address {
+    zone_id = var.zone
+  }
+}
+
+# Статический IP для публичной ВМ
+resource "yandex_vpc_address" "public_vm_address" {
+  name = "public-vm-static-ip"
+  
+  external_ipv4_address {
+    zone_id = var.zone
   }
 }

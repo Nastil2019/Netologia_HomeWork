@@ -14,8 +14,8 @@ output "nat_instance_ip" {
 }
 
 output "nat_instance_public_ip" {
-  value       = yandex_compute_instance.nat.network_interface[0].nat_ip_address
-  description = "Public IP of NAT instance"
+  value       = yandex_vpc_address.nat_address.external_ipv4_address[0].address
+  description = "Static public IP of NAT instance"
 }
 
 output "ssh_to_private_vm" {
