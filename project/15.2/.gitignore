@@ -1,0 +1,9 @@
+*.tfvars
+.terraform/
+*.tfstate
+*.key
+*.pem
+*lock*
+terraform.tfstate.backup
+*tfstate*
+.terraform*
