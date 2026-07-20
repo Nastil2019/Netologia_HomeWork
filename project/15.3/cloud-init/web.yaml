@@ -1,0 +1,36 @@
+#cloud-config
+users:
+  - name: yc-user
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ${ssh_public_key}
+
+write_files:
+  - content: |
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>LAMP Server - Netology HW 15.2</title>
+        <meta charset="UTF-8">
+      </head>
+      <body>
+        <h1> Instance Group работает!</h1>
+        <p>Это веб-сервер на базе LAMP стека из Instance Group Yandex Cloud.</p>
+        <hr>
+        <h2>Картинка из Object Storage:</h2>
+        <img src="${image_url}" alt="Image from Yandex Object Storage" style="max-width: 500px; border: 3px solid #4CAF50; border-radius: 10px; margin: 20px 0;">
+        <br>
+        <a href="${image_url}" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Открыть картинку в Object Storage</a>
+        <hr>
+        <p><small>Server: LAMP Stack | Provider: Yandex Cloud</small></p>
+      </body>
+      </html>
+    path: /var/www/html/index.html
+    owner: www-data:www-data
+    permissions: '0644'
+
+runcmd:
+  - systemctl restart apache2
+  - echo "Cloud-init completed at $(date)" >> /var/log/cloud-init-custom.log

@@ -1,0 +1,15 @@
+#cloud-config
+users:
+  - name: yc-user
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ${ssh_public_key}
+
+packages:
+  - curl
+  - wget
+
+ssh_pwauth: false
+disable_root: true
